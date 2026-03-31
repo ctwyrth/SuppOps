@@ -1,0 +1,22 @@
+{
+  "name": "suppops",
+  "version": "1.0.0",
+  "description": "A tech support focused ticketing and resolution app, developed as a portfolio/learning project.",
+  "keywords": [
+    "technical",
+    "support",
+    "operations",
+    "ticketing",
+    "logging"
+  ],
+  "license": "ISC",
+  "author": "C. Thomas Wyrth",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
