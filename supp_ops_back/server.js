@@ -1,11 +1,13 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+const config = require('./config/envConfig');
+const connectToDatabase = require('./config/dbConfig');
+const server = require('./app');
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+connectToDatabase()
+  .then(() => {
+    server.listen(config.port, () => {
+      console.log(`[Server] Server is running on http://localhost:${config.port} in ${config.env} mode`);
+    });
+  })
+  .catch(err => {
+    console.error('[ERROR] Failed to start server:', err);
+  });
