@@ -5,9 +5,9 @@ const server = require('./app');
 connectToDatabase()
   .then(() => {
     server.listen(config.port, () => {
-      console.log(`[Server] Server is running on http://localhost:${config.port} in ${config.env} mode`);
+      console.log(`[SERVER] Server is running on http://localhost:${config.port} in ${config.env} mode`);
     });
   })
   .catch(err => {
-    console.error('[ERROR] Failed to start server:', err);
+    console.error('[SERVER ERROR] Failed to start server:', err);
   });
