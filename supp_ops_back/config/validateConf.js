@@ -9,10 +9,10 @@ function configValidation(config) {
   if (!jwtSecret) requiredMissing.push('SO_JWT_SECRET');
 
   if (requiredMissing.length > 0) {
-    console.error(`[CONFIG ERROR] Missing required configuration variables: ${requiredMissing.join(', ')}. Please check your .env file.`);
+    console.error(`[CONFIG][ERROR] Missing required configuration variables: ${requiredMissing.join(', ')}. Please check your .env file.`);
     process.exit(1);
   } else {
-    console.log('[CONFIG] All required configuration variables are present');
+    console.log('[CONFIG] Environment configuration validated successfully. All required variables are present.');
   }
 }
 

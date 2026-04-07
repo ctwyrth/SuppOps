@@ -1,9 +1,6 @@
 // set up access to .env variables
 require('dotenv').config();
 
-// attach validation to config loading
-const configValidation = require('./validateConf');
-
 const config = {
   env: process.env.SO_NODE_ENV || 'development',
   port: process.env.SO_PORT || 3000,
@@ -19,7 +16,5 @@ const config = {
     secret: process.env.SO_JWT_SECRET
   },
 };
-
-configValidation(config);
 
 module.exports = config;

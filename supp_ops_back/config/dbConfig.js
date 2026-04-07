@@ -13,7 +13,7 @@ async function connectToDatabase() {
     await mongoose.connect(mongoDBUrl);
     console.log('[DB] Mongoose connected successfully on port' + dbPort + '/' + dbName);
   } catch (err) {
-    console.error('[DB ERROR] Mongoose connection error:', err);
+    console.error('[DB][ERROR] Mongoose connection error:', err);
     throw err;
   }
 }
