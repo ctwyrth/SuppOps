@@ -12,7 +12,7 @@ function configValidation(config) {
     console.error(`[CONFIG ERROR] Missing required configuration variables: ${requiredMissing.join(', ')}. Please check your .env file.`);
     process.exit(1);
   } else {
-    console.log('[CONFIG] All required configuration variables are present');
+    console.log('[CONFIG] Environment configuration validated successfully. All required variables are present.');
   }
 }
 

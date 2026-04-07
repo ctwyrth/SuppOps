@@ -1,7 +1,6 @@
 // create the server
 const express = require('express');
 const app = express();
-console.log("[STARTUP] Initializing Express server");
 
 // add JSON parsing middleware
 app.use(express.json());
@@ -13,6 +12,8 @@ app.use(cors());
 // integrate external route files & mount routes
 const baseRoutes = require('./routes/api_v1');
 app.use('/api/v1', baseRoutes);
+
+console.log("[APP] SuppOps Express server initialized successfully with routes and middleware");
 
 // export the server for use in server.js
 module.exports = app;
