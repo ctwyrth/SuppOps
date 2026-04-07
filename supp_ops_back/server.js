@@ -9,5 +9,6 @@ connectToDatabase()
     });
   })
   .catch(err => {
-    console.error('[SERVER ERROR] Failed to start server:', err);
+    console.error('[FATAL ERROR] Server startup aborted:', err.message);
+    process.exit(1);
   });
