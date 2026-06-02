@@ -18,6 +18,6 @@ connectToDatabase()
     });
   })
   .catch(err => {
-    console.error('[FATAL][ERROR] Server startup aborted:', err.message);
+    console.error('[FATAL] Server startup aborted:', err.message);
     process.exit(1);
   });

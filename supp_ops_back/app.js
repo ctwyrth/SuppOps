@@ -13,6 +13,10 @@ app.use(cors());
 const baseRoutes = require('./routes/api_v1');
 app.use('/api/v1', baseRoutes);
 
+// adding error handling middleware
+const errorHandler = require('./middleware/errorHandling');
+app.use(errorHandler);
+
 console.log("[APP] SuppOps Express server initialized successfully with routes and middleware");
 
 // export the server for use in server.js
